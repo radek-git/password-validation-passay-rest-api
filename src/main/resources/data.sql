@@ -1,0 +1,10 @@
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Benjamen', 'Hundal', 'bhundal0', 56959148302, 'kf5nL6ZPXy@@', 'bhundal0@census.gov', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Fredra', 'Connochie', 'fconnochie1', 87908154225, 'M14mlGr##', 'fconnochie1@yolasite.com', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Pearline', 'Cubbon', 'pcubbon2', 77774173299, '4CKEG0iJXTW$$', 'pcubbon2@cmu.edu', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Codie', 'Hatzar', 'chatzar3', 12810359219, '9ceYeCHPNf3!!', 'chatzar3@cbc.ca', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Donal', 'Szreter', 'dszreter4', 19979388689, 'xqhTDcAq@@', 'dszreter4@merriam-webster.com', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Cesaro', 'Noulton', 'cnoulton5', 16466586252, 'XNjOXb8HxM##', 'cnoulton5@harvard.edu', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Marie', 'Walewicz', 'mwalewicz6', 97290340308, 'B73VFmE$$', 'mwalewicz6@ocn.ne.jp', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Dennis', 'Hillin', 'dhillin7', 60454098897, 'FmFRa8!!', 'dhillin7@google.co.uk', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Ginelle', 'Tremblot', 'gtremblot8', 35235305598, 'AaE4xlYR8qX@@', 'gtremblot8@ycombinator.com', CURRENT_TIMESTAMP());
+insert into User (first_name, last_name, username, pesel, password, email, created_at) values ('Munroe', 'Colten', 'mcolten9', 94446557850, '8xyaJeS2iX##', 'mcolten9@google.com', CURRENT_TIMESTAMP());
