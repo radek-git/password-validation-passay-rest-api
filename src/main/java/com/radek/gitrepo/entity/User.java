@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
@@ -20,14 +21,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class User extends AbstractEntity{
 
+    @NotNull(message = "Imię nie może być puste")
     @Size(min = 1, max = 20, message = "Podaj właściwą długość imienia (1-20 znaków)")
     @Pattern(regexp = "[A-Za-z]+", message = "Imię moze składać się tylko z liter")
     private String firstName;
 
+    @NotNull
     @Size(min = 1, max = 20, message = "Podaj właściwą długość nazwiska (1-20 znaków)")
     @Pattern(regexp = "[A-Za-z]+", message = "Nazwisko moze składać się tylko z liter")
     private String lastName;
 
+    @NotNull
     @Size(min = 1, max=20, message = "Podaj właściwą długość (1-10 znaków)")
     @Column(unique = true)
     private String username;
@@ -43,6 +47,8 @@ public class User extends AbstractEntity{
     private String password;
 
     @Email(message = "Podaj prawidlowy adres email")
+    @NotNull
+    @Column(unique = true)
     private String email;
 
     @CreationTimestamp

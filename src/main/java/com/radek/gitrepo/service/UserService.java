@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -20,5 +22,9 @@ public class UserService {
 
     public Page<User> findAll(UserSpecification userSpecification, Pageable pageable) {
         return userRepository.findAll(userSpecification, pageable);
+    }
+
+    public User add(User user) {
+        return userRepository.save(user);
     }
 }
