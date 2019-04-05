@@ -32,7 +32,7 @@ public class User extends AbstractEntity{
     private String lastName;
 
     @NotNull
-    @Size(min = 1, max=20, message = "Podaj właściwą długość (1-10 znaków)")
+    @Size(min = 1, max=20, message = "Podaj właściwą długość (1-20 znaków)")
     @Column(unique = true)
     private String username;
 
