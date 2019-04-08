@@ -1,6 +1,7 @@
 package com.radek.gitrepo.exception;
 
 import org.springframework.context.support.DefaultMessageSourceResolvable;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,6 +35,17 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, apiError, headers, apiError.getStatus(), request);
     }
 
+//    @ExceptionHandler({DataIntegrityViolationException.class})
+//    public ResponseEntity<Object> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
+//        logger.info(ex.getClass().getName());
+//
+//        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getLocalizedMessage());
+//
+//        System.out.println(".......");
+//
+//        return new ResponseEntity<>(apiError, apiError.getStatus());
+//    }
+
     @ExceptionHandler({ConstraintViolationException.class})
     public ResponseEntity<Object> handleConstraintViolation(ConstraintViolationException ex) {
         logger.info(ex.getClass().getName());
@@ -43,6 +55,8 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
                 .collect(Collectors.toList());
 
         ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, errors);
+
+        System.out.println("...");
 
         return new ResponseEntity<>(apiError, apiError.getStatus());
     }

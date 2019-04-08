@@ -1,4 +1,4 @@
-package com.radek.gitrepo.validation;
+package com.radek.gitrepo.validation.password;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

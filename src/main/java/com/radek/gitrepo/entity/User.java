@@ -1,7 +1,9 @@
 package com.radek.gitrepo.entity;
 
 
-import com.radek.gitrepo.validation.ValidPassword;
+import com.radek.gitrepo.service.UserService;
+import com.radek.gitrepo.validation.unique.Unique;
+import com.radek.gitrepo.validation.password.ValidPassword;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,10 +34,13 @@ public class User extends AbstractEntity{
     private String lastName;
 
     @NotNull
+    @Unique(service = UserService.class, fieldName = "username", message = "Uzytkownik o podanej nazwie uzytkownika juz istnieje")
     @Size(min = 1, max=20, message = "Podaj właściwą długość (1-20 znaków)")
     @Column(unique = true)
     private String username;
 
+    @NotNull
+    @Unique(service = UserService.class, fieldName = "pesel", message = "Uzytkownik o podanym peselu juz istnieje")
     @Pattern(regexp = "[0-9]{11}", message = "Pesel musi skladac sie tylko z cyfr")
     @Size(min = 11, max = 11, message = "Pesel musi zawierac dokladnie 11 cyfr")
     @Column(unique = true, updatable = false)
@@ -46,8 +51,9 @@ public class User extends AbstractEntity{
 //            message = "Min długość hasła to 8 znaków, hasło musi składać się przynajmniej z 1 litery, 1 cyfry, 1 znaku specjalnego ")
     private String password;
 
-    @Email(message = "Podaj prawidlowy adres email")
     @NotNull
+    @Unique(service = UserService.class, fieldName = "email", message = "Uzytkownik o podanym emailu juz istnieje")
+    @Email(message = "Podaj prawidlowy adres email")
     @Column(unique = true)
     private String email;
 

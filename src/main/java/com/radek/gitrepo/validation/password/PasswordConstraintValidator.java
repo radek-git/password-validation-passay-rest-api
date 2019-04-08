@@ -1,4 +1,4 @@
-package com.radek.gitrepo.validation;
+package com.radek.gitrepo.validation.password;
 
 import org.passay.*;
 
@@ -7,7 +7,6 @@ import javax.validation.ConstraintValidatorContext;
 import java.util.List;
 
 public class PasswordConstraintValidator implements ConstraintValidator<ValidPassword, String> {
-
 
     @Override //kod napisany w tym miejscu sprawdza hasło
     public boolean isValid(String password, ConstraintValidatorContext context) {
