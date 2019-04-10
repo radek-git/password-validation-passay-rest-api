@@ -26,7 +26,7 @@ public class User extends AbstractEntity{
     @NotNull(message = "Imię nie może być puste")
     @Size(min = 1, max = 20, message = "Podaj właściwą długość imienia (1-20 znaków)")
     @Pattern(regexp = "[A-Za-z]+", message = "Imię moze składać się tylko z liter")
-    private String firstName;
+    private String firstName; // first_name
 
     @NotNull
     @Size(min = 1, max = 20, message = "Podaj właściwą długość nazwiska (1-20 znaków)")

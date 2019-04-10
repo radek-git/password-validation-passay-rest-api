@@ -1,6 +1,6 @@
 package com.radek.gitrepo.validation.unique;
 
-import com.radek.gitrepo.FieldValueExists;
+import com.radek.gitrepo.service.util.FieldValueExists;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

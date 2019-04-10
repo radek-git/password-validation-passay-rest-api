@@ -1,4 +1,4 @@
-package com.radek.gitrepo;
+package com.radek.gitrepo.service.util;
 
 public interface FieldValueExists {
 

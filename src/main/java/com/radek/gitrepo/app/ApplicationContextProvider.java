@@ -1,4 +1,4 @@
-package com.radek.gitrepo;
+package com.radek.gitrepo.app;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
